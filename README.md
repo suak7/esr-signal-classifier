@@ -1,8 +1,5 @@
 # Electron Spin Resonance (ESR) Signal Classifier
 
-## Inspiration
-<p>My motivation behind this project sparked a while after my junior year of high school when I worked on electron spin resonance research to study organic semiconductors and DNA nanocrystals. I gained intermediate experience in research techniques, such as freeze pump thaw, X-ray diffraction, electron microscopy, ball milling, and magic angle spinning. I wished for my first personal project to connect back to a learning experience, so I chose my previous lab research experience to make it an informative, enjoyable journey for myself.</p>
-
 ## Project Overview
 <p>A PyTorch-based neural network that demonstrates AI signal classification, dataset generation, model training, and performance visualization. The goal is to classify synthetic electron spin resonance (ESR) signals into three distinct classes based on their characteristic patterns:</p>
 
