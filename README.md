@@ -1,13 +1,12 @@
-# Electron Spin Resonance (ESR) Signal Classifier
+<h1 align="center">Electron Spin Resonance (ESR) Spectrum Analyzer</h1>
 
 ## Project Overview
-<p>A PyTorch-based neural network that demonstrates AI signal classification, dataset generation, model training, and performance visualization. The goal is to classify synthetic electron spin resonance (ESR) signals into three distinct classes based on their characteristic patterns:</p>
+<p>A PyTorch-based neural network for classifying synthetic Electron Spin Resonance (ESR) signals into three distinct spectral patterns.</p>
 
-* Class 0: Single Gaussian-like peak
-* Class 1: Double Gaussian peaks
-* Class 2: Irregular / high-frequency noisy pattern
-
-The dataset is designed to mimic realistic ESR measurements, including natural variability and noise.
+## Signal Classes
+- **Class 0**: Single Gaussian-like peak (single ESR transition)
+- **Class 1**: Double Gaussian peaks (multiple ESR transitions)
+- **Class 2**: Irregular oscillating pattern (noisy/complex spectra)
 
 ## Features
 * Generates synthetic signals with different patterns: Class 0, Class 1, and Class 2
@@ -15,7 +14,7 @@ The dataset is designed to mimic realistic ESR measurements, including natural v
 * Splitting of dataset into training and test sets using PyTorch DataLoader
 * Visualizes performance curves
 
-## Getting Started
+## Installation
 
 Requirements:
 
@@ -26,7 +25,11 @@ Requirements:
 
 Install Packages:
 ```bash
-# Create + activate venv (macOS / Linux)
+# Clone repository
+git clone 
+cd esr-signal-classifier
+
+# Create virtual environment (macOS / Linux)
 python3 -m venv venv
 source venv/bin/activate
 
@@ -38,16 +41,36 @@ python -m venv venv
 pip install numpy matplotlib torch scikit-learn
 ```
 
-## Generating the Plots
+## Quick Start
 ```bash
-# Generate dataset
-python3 data_generation.py
+# 1. Generate synthetic dataset
+python src/data/generate_signals.py
 
-# Train the model
-python3 train.py
+# 2. Train model
+python src/training/train.py
 
-# Visualize training curves
-python3 visualize.py
+# 3. Visualize training curves
+python visualize.py
+
+# 4. Results will be saved in outputs/
+
+# Tip: If you want to increase complexity in the signals,
+# increase noise, increase dataset variability, add validation split, or use dropout.
 ```
 
-* Tip: If you want to increase complexity in the signals, increase noise, increase dataset variability, add validation split, or use dropout.
+## Configuration
+All hyperparameters are centralized in `config.py`. Below are the key settings:
+```python
+# Data
+SIGNAL_LENGTH = 1000
+NUM_SAMPLES_PER_CLASS = 1000
+
+# Model
+HIDDEN_SIZES = (256, 128)
+DROPOUT_RATE = 0.2
+
+# Training
+LEARNING_RATE = 0.001
+BATCH_SIZE = 32
+NUM_EPOCHS = 20
+```
