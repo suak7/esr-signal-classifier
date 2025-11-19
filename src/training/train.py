@@ -11,7 +11,6 @@ from data.dataloader import ESRDataModule
 
 class Trainer:
     # Model training and evaluation
-    
     def __init__(
         self,
         model: nn.Module,

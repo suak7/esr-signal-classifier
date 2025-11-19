@@ -4,8 +4,6 @@ from torch.utils.data import TensorDataset, DataLoader, random_split
 from typing import Tuple
 
 class ESRDataModule:
-    # Loading and preparing ESR signal dataset
-    
     def __init__(
         self, 
         data_path: str = "data/signals.npy",

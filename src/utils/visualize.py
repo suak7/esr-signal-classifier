@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# visualize both training loss and test accuracy curves
+# Visualize training loss and test accuracy curves
 def plot_training_curves():
     loss_history = np.load("loss_history.npy")
     accuracy_history = np.load("accuracy_history.npy")
