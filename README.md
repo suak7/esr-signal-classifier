@@ -28,7 +28,7 @@ Install Packages:
 ```bash
 # Clone repository
 git clone 
-cd esr-signal-classifier
+cd esr-spectrum-analyzer
 
 # Create virtual environment (macOS / Linux)
 python3 -m venv venv
