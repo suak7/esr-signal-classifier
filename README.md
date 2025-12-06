@@ -1,9 +1,7 @@
 <h1 align="center">Electron Spin Resonance (ESR) Spectrum Analyzer</h1>
 
-## Project Overview
 <p>A PyTorch-based neural network for classifying synthetic Electron Spin Resonance (ESR) signals into three distinct spectral patterns.</p>
 
-## Signal Classes
 - **Class 0**: Single Gaussian-like peak (single ESR transition)
 - **Class 1**: Double Gaussian peaks (multiple ESR transitions)
 - **Class 2**: Irregular oscillating pattern (noisy/complex spectra)
@@ -60,7 +58,7 @@ python visualize.py
 ```
 
 ## Configuration
-All hyperparameters are centralized in `config.py`. Below are the key settings:
+All hyperparameters can be found in `config.py`. Below are the key settings:
 ```python
 # Data
 SIGNAL_LENGTH = 1000
